@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,19 +9,24 @@
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="form">
-        <h1>Hey!</h1>
-        <h1>Welcome to Meme-anator</h1>
-        <form>
-            <label>Image Link</label>
-            <input type="text" id="URL" name="URL"/>
-            <label>Top Text</label>
-            <input type="text" name="Top Text" id="top_text">
-            <label>Bottom Text</label>
-            <input type="text" name="Bottom Text" id="bottom_text">
-            <button>Generate Meme</button>
-        </form>
+        <span id="form_child">
+            <span>
+                <h1>Hey!</h1>
+                <h1>Welcome to Meme-anator</h1>
+            </span>
+            <form>
+                <label>Image Link<input type="text" id="URL" name="URL" /></label>
+
+                <label>Top Text<input type="text" name="Top Text" id="top_text"></label>
+
+                <label>Bottom Text<input type="text" name="Bottom Text" id="bottom_text"></label>
+
+                <button>Generate Meme</button>
+            </form>
+        </span>
     </div>
     <div>
         <h6>Your Last Four Generated Memes</h6>
@@ -32,4 +38,5 @@
         </div>
     </div>
 </body>
+
 </html>
