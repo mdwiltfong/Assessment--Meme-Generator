@@ -3,7 +3,7 @@ body{
     color: #942911;
 }
 
-#form{
+#form, #form_meme{
     position: relative;
     background-color:#94B9AF ;
     border-radius: 100%;
@@ -11,6 +11,11 @@ body{
     height:540px;
     margin: 0 auto;
     text-align: center;
+}
+
+#form_meme{
+    border-radius: 0px;
+
 }
 
 h1{
@@ -41,4 +46,8 @@ button{
 input{
     border-radius: 25px;
     margin:5px;
+}
+
+#form_meme{
+
 }
