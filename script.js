@@ -1,12 +1,12 @@
 let gen_btn=document.querySelector("button");
-let btm_text=document.querySelector(`input[name="Bottom Text]`);
-let tp_text=document.querySelector(`input[name="Top Text]`);
+let btm_text=document.getElementById(`bottom_text`);
+let tp_text=document.getElementById(`top_text`);
 let img_link=document.querySelector(`#URL`);
 let form = document.querySelector(`form`);
 
 form.addEventListener('submit',(e)=>{
     
-    storeMeme(img_link.value,)
+    storeMeme(img_link.value,tp_text.value,btm_text.value)
   
 })
 
