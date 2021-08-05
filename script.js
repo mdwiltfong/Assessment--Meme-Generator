@@ -5,10 +5,12 @@ let img_link=document.querySelector(`#URL`);
 let form = document.querySelector(`form`);
 
 form.addEventListener('submit',(e)=>{
-    e.preventDefault();
+    
     storeMeme(img_link.value,)
-    console.log(`submit`)
+  
 })
+
+
 
 
 
@@ -22,7 +24,7 @@ let data={
 }
 try{
     
-    sessionStorage(data);
+    localStorage.setItem(`meme`,JSON.stringify(data));
     console.log(`Stored`)
 }catch(error){
     console.log(error)
