@@ -11,13 +11,13 @@
 </head>
 
 <body>
-    <div id="form">
+    <div id="input_field">
         <span id="form_child">
             <span>
                 <h1>Hey!</h1>
                 <h1>Welcome to Meme-anator</h1>
             </span>
-            <form action="./meme.html">
+            <form>
                 <label>Image Link<input type="text" id="URL" name="URL" /></label>
 
                 <label>Top Text<input type="text" name="Top Text" id="top_text"></label>
@@ -27,6 +27,13 @@
                 <button>Generate Meme</button>
             </form>
         </span>
+    </div>
+    <div id="form_meme">
+        <div>
+            <p id="top">Top Text</p>
+            <img crossOrigin="anonymous" id="meme" src="" alt="">
+            <p id="bottom">Bottom Text</p>
+        </div>
     </div>
     <div>
         <h6>Your Last Four Generated Memes</h6>
