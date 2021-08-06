@@ -16,9 +16,21 @@ form.addEventListener('submit',(e)=>{
     form_meme.style.display=`block`
     tp.innerText=tp_text.value;
     bt.innerText=btm_text.value;  
-    img.setAttribute('src',`${img_link.value}`)  
+    img.setAttribute('src',`https://shop.stockphotosecrets.com/stock-photo-preview/87222004/1000/iss_9875_02792.jpg`)  
+    //getImage(img_link.value).then((response)=>{console.log(response)})
 })
 
+async function getImage(url){
+let headers = new Headers();
+
+headers.append(`Origin`,`http://127.0.0.1:5500`);
+headers.append(`Access-Control-Request-Method`,`POST`);
+headers.append(`Access-Control-Request-Headers`,`X-Custom-Header`)
+
+    let response = await fetch(url,{mode:`cors`,headers})
+    response.json;
+    return response
+}
 
 
 
