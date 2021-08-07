@@ -2,12 +2,13 @@ let gen_btn=document.querySelector("button");
 let btm_text=document.getElementById(`bottom_text`);
 let tp_text=document.getElementById(`top_text`);
 let img_link=document.querySelector(`#URL`);
-let form = document.querySelector(`form`);
-
+let form = document.getElementById(`form`);
+let form_meme=document.querySelector(`#form_meme`);
 form.addEventListener('submit',(e)=>{
-    
-    storeMeme(img_link.value,tp_text.value,btm_text.value)
-  
+    e.preventDefault();
+    storeMeme(img_link.value,tp_text.value,btm_text.value);
+    form.style.display='none';
+    form_meme.style.display=`block`;
 })
 
 

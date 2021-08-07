@@ -11,12 +11,16 @@ body{
     height:540px;
     margin: 0 auto;
     text-align: center;
+
+}
+#form{
+    display:hidden;
 }
 
 #form_meme{
     border-radius: 0px;
     margin-top: 20px;
-
+    display:hidden;
 }
 
 h1{
@@ -26,7 +30,6 @@ h1{
 form{
     display: flex;
     flex-direction: column;
-    
     text-align: center;
     align-items: flex-end;
     width: 270px;
