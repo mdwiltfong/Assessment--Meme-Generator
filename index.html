@@ -18,14 +18,13 @@
                 <h1>Welcome to Meme-anator</h1>
             </span>
             <form action="">
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-                    <div id="myDropdown" class="dropdown-content">
-                      <a href="#">Link 1</a>
-                      <a href="#">Link 2</a>
-                      <a href="#">Link 3</a>
-                    </div>
-                  </div>
+               <select name="memes" id="meme_select">
+                   <option value="default">Please Choose A Meme</option>
+                   <option value="Third_world_Skeptical_Kid.png">Third World Skeptical Kid</option>
+                   <option value="awkward_seal.png">Awkward Seal</option>
+                   <option value="Bad_Luck_Brian.jpg">Bad Luck Brian</option>
+                   <option value="spongegar.png">Spongegar</option>
+               </select>
 
                 <label>Top Text<input type="text" name="Top Text" id="top_text"></label>
 
@@ -38,7 +37,7 @@
     <div id="form_meme">
         <div>
             <p id="top">Top Text</p>
-            <img id="meme" src="" alt="">
+            <img id="meme" src="./assets/Third_world_Skeptical_Kid.png" alt="">
             <p id="bottom">Bottom Text</p>
         </div>
     </div>
