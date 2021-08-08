@@ -16,7 +16,7 @@ form.addEventListener('submit',(e)=>{
     form_meme.style.display=`block`
     tp.innerText=tp_text.value;
     bt.innerText=btm_text.value;  
-    img.setAttribute('src',`https://shop.stockphotosecrets.com/stock-photo-preview/87222004/1000/iss_9875_02792.jpg`)  
+    img.setAttribute('src',`${img_link.value}`)  
     //getImage(img_link.value).then((response)=>{console.log(response)})
 })
 
