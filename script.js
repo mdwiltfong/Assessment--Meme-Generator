@@ -10,6 +10,7 @@ let bottom = document.getElementById(`bottom`);
 let last_four = document.getElementById(`last_four`);
 let recImages = document.getElementById(`images`);
 let datas = allStorage();
+let btn_save=document.getElementById(`save`);
 console.log(datas);
 let container = document.getElementById(`images`);
 console.log(container);
@@ -24,13 +25,18 @@ form.addEventListener('submit', (e) => {
         form_meme.style.display = `block`;
         bottom.innerText = btm_text.value;
         topText.innerText = tp_text.value;
-        let newMeme = new Meme(meme_select.value, topText.innerText, bottom.innerText, i);
-        console.log(newMeme);
-        localStorage.setItem(`meme${i+1}`, JSON.stringify(newMeme));
+        
     } else {
         alert(`Please fill out the form to continue!`)
     }
 
+})
+
+btn_save.addEventListener('click',(e)=>{
+    let newMeme = new Meme(meme_select.value, topText.innerText, bottom.innerText, i);
+        console.log(newMeme);
+        localStorage.setItem(`meme${i+1}`, JSON.stringify(newMeme));
+        console.log(`SAVED!`)
 })
 
 window.addEventListener(`DOMContentLoaded`, () => {
