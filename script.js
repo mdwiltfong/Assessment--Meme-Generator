@@ -11,6 +11,7 @@ let last_four = document.getElementById(`last_four`);
 let recImages = document.getElementById(`images`);
 let datas = allStorage();
 let btn_save=document.getElementById(`save`);
+let btn_nope=document.getElementById(`nope`);
 console.log(datas);
 let container = document.getElementById(`images`);
 console.log(container);
@@ -39,6 +40,10 @@ btn_save.addEventListener('click',(e)=>{
         console.log(`SAVED!`)
 })
 
+btn_nope.addEventListener('click',()=>{
+    location.reload();
+})
+
 window.addEventListener(`DOMContentLoaded`, () => {
     if (!datas) {
         console.log(`Waiting for bodacious meme`)
@@ -47,13 +52,21 @@ window.addEventListener(`DOMContentLoaded`, () => {
 for(let j=0;j<i;j++){
     let img = document.createElement(`img`);
     img.setAttribute(`src`,`./assets/${JSON.parse(datas[j]).path}`)
+    img.setAttribute(`key`,`${j}`);
     container.append(img);
 }
 
 
 })
 
+recImages.addEventListener(`dblclick`,(e)=>{
+let parent=e.target.parentElement;
+let key=e.target.getAttribute('key');
+console.log(key++)
+localStorage.removeItem(`meme${key++}`)
+parent.removeChild(e.target);
 
+})
 
 function Meme(url, top, bottom, index) {
     this.path = url,
