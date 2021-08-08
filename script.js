@@ -32,18 +32,18 @@ form.addEventListener('submit', (e) => {
     }
 
 })
-
+//saves memes if user likes image 
 btn_save.addEventListener('click',(e)=>{
     let newMeme = new Meme(meme_select.value, topText.innerText, bottom.innerText, i);
         console.log(newMeme);
         localStorage.setItem(`meme${i+1}`, JSON.stringify(newMeme));
         console.log(`SAVED!`)
 })
-
+//reloads page if user doesn't like meme they've created
 btn_nope.addEventListener('click',()=>{
     location.reload();
 })
-
+//Loads localstorage containing user's saved memes
 window.addEventListener(`DOMContentLoaded`, () => {
     if (!datas) {
         console.log(`Waiting for bodacious meme`)
@@ -51,29 +51,46 @@ window.addEventListener(`DOMContentLoaded`, () => {
   
 for(let j=0;j<i;j++){
     let img = document.createElement(`img`);
+    let p_top=document.createElement(`p`);
+    p_top.setAttribute(`id`,`top_preview`);
+    let p_btm=document.createElement(`p`);
+    p_btm.setAttribute(`id`,`bottom_preview`);
+    let div=document.createElement(`div`);
+    p_top.innerText=JSON.parse(datas[j]).topText;
+    p_btm.innerText=JSON.parse(datas[j]).bottomText;
+    
     img.setAttribute(`src`,`./assets/${JSON.parse(datas[j]).path}`)
-    img.setAttribute(`key`,`${j}`);
-    container.append(img);
+    img.setAttribute(`key`,`${JSON.parse(datas[j]).index}`);
+    div.append(p_top);
+    div.append(img);
+    div.append(p_btm);
+    
+    container.append(div);
+    
 }
 
 
 })
-
+//Deletes user's stored memes
 recImages.addEventListener(`dblclick`,(e)=>{
 let parent=e.target.parentElement;
 let key=e.target.getAttribute('key');
-console.log(key++)
-localStorage.removeItem(`meme${key++}`)
-parent.removeChild(e.target);
+console.log(key++);
+console.log(e.target)
+localStorage.removeItem(`meme${key++}`);
+while(parent.firstChild){
+    parent.removeChild(parent.firstChild);
+}
 
 })
-
+//creates new objects
 function Meme(url, top, bottom, index) {
     this.path = url,
         this.topText = top,
-        this.bottomText = bottom
+        this.bottomText = bottom,
+        this.index=index
 }
-
+//Help converts localstorage to an array
 function allStorage() {
 
     var values = [],

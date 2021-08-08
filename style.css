@@ -25,7 +25,7 @@ body{
     position: relative;
     height: auto;
     width: auto;
-    display:inline-flexbox;
+    display:inline-block;
     color:white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-size: 20px;  
@@ -36,15 +36,17 @@ body{
  }
  #form_meme div p{
      position: absolute;
+     width: 100%;
  }
  
  #top{
      top:0%;
-     left:50%;
+     left:0%;
  }
  #bottom{
      bottom: 0%;
-     left:50%;
+     left:0%;
+     text-align: center;
  }
  
 
@@ -79,12 +81,44 @@ input{
 
 #images{
 display: flex;
-justify-content:space-around;
-flex-wrap: wrap;
+justify-content: space-around;
 
 }
 #images img{
     height:20em;
     width: 20em;
 }
+
+#images div{
+    position: relative;   
+    display: inline-block; 
+   
+}
+
+#images div p{
+    position: absolute;
+    margin: 0px auto;
+    color:white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 25px;
+    text-align: center;
+    display: block;
+    width:auto;
+    transform: translate(-50%,-10%);
+
+}
+
+#top_preview{
+   left: 50%;
+   top:0;
+
+    
+}
+
+#bottom_preview{
+    left:50%;
+    bottom: 0px;
+    
+}
+
 
