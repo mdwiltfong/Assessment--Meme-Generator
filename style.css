@@ -74,4 +74,14 @@ input{
     margin:5px;
 }
 
+#images{
+display: flex;
+justify-content:space-around;
+flex-wrap: wrap;
+
+}
+#images img{
+    height:20em;
+    width: 20em;
+}
 
