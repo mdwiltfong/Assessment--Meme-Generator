@@ -21,6 +21,7 @@ form.addEventListener('submit', (e) => {
 
     if (meme_select.value && btm_text.value && tp_text.value) {
         img.setAttribute('src', `./assets/${meme_select.value}`);
+        // imgur could be a server that could allow you to pull images via javascript
         console.log(img.getAttribute(`src`))
         form.style.display = 'none';
         form_meme.style.display = `block`;
